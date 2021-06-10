@@ -49,7 +49,8 @@
       "load_failed": "Kategorien kargatzeak huts egin du: {error_msg}",
       "load_no_response": "Ezin izan da kategoriak zerbitzaritik berreskuratu.",
       "api_version_check_failed": "Ezin izan da zerbitzariaren API bertsioa egiaztatu:\n{error_msg}",
-      "api_version_above_confirmed": "Zerbitzariaren API bertsioa eguneratu zen. Baliteke zenbait funtziok espero ez bezala funtzionatzea. Mesedez, itxaron eguneratze bat!\n{version}"
+      "api_version_above_confirmed": "Zerbitzariaren API bertsioa eguneratu zen. Baliteke zenbait funtziok espero ez bezala funtzionatzea. Mesedez, itxaron eguneratze bat!\n{version}",
+      "plugin_missing": "Categories could not be loaded. Make sure that the cookbook plugin is installed on this nextcloud instance!"
     }
   },
   "recipe_list": {
@@ -89,6 +90,13 @@
       "update_failed": "Eguneratzeak huts egin du {error_msg}"
     }
   },
+  "recipe_create": {
+    "title": "Sortu errezeta",
+    "button": "Sortu errezeta",
+    "errors": {
+      "update_failed": "Create Failed {error_msg}"
+    }
+  },
   "recipe_import": {
     "title": "Inportatu errezeta",
     "button": "Inportatu",
@@ -99,7 +107,10 @@
     }
   },
   "search": {
-    "title": "Bilatu",
-    "nothing_found": "Ez da errezetarik aurkitu!"
+    "title": "Search Recipe",
+    "nothing_found": "Ez da errezetarik aurkitu!",
+    "errors": {
+      "search_failed": "Unable to load all Recipes!\n{error_msg}"
+    }
   }
 }

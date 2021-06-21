@@ -15,7 +15,7 @@ version: 0.6.0+18
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
-  flutter: 2.2.0
+  flutter: 2.2.1
 
 dependencies:
   flutter:
@@ -49,9 +49,6 @@ dependencies:
 
   # Search Field (For Category & Tags)
   searchfield: ^0.5.2
-
-  # Search
-  search_page: ^2.0.0
 
   # Form data HTTP Client
   dio: ^4.0.0

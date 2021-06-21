@@ -16,6 +16,8 @@ import 'package:nextcloud_cookbook_flutter/src/widget/category_card.dart';
 import 'package:search_page/search_page.dart';
 
 import 'recipe_screen.dart';
+import '../models/keyword.dart';
+import 'package:nextcloud_cookbook_flutter/src/widget/recipe_search_page.dart';
 
 class CategoryScreen extends StatefulWidget {
   @override
@@ -95,17 +97,12 @@ class _CategoryScreenState extends State<CategoryScreen> {
                       if (recipeShortState is RecipesShortLoadAllSuccess) {
                         showSearch(
                           context: context,
-                          delegate: SearchPage<RecipeShort>(
+                          delegate: RecipeSearchPage<RecipeShort>(
                             items: recipeShortState.recipesShort,
-                            searchLabel: translate('search.title'),
-                            suggestion: Center(
-                                // child: Text('Filter people by name, surname or age'),
-                                ),
-                            failure: Center(
-                              child: Text(translate('search.nothing_found')),
-                            ),
+
                             filter: (recipe) => [
                               recipe.name,
+                              recipe.keywords,
                             ],
                             builder: (recipe) => ListTile(
                               title: Text(recipe.name),
@@ -118,11 +115,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                               ),
                               onTap: () =>
                                   Navigator.of(context).pushReplacement(
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      RecipeScreen(recipeId: recipe.recipeId),
-                                ),
-                              ),
+                                    MaterialPageRoute(
+                                      builder: (context) =>
+                                          RecipeScreen(recipeId: recipe.recipeId),
+                                    ),
+                                  ),
                             ),
                           ),
                         );

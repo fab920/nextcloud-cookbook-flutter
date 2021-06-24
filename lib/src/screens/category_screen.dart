@@ -13,7 +13,6 @@ import 'package:nextcloud_cookbook_flutter/src/screens/recipes_list_screen.dart'
 import 'package:nextcloud_cookbook_flutter/src/widget/api_version_warning.dart';
 import 'package:nextcloud_cookbook_flutter/src/widget/authentication_cached_network_image.dart';
 import 'package:nextcloud_cookbook_flutter/src/widget/category_card.dart';
-import 'package:search_page/search_page.dart';
 
 import 'recipe_screen.dart';
 import '../models/keyword.dart';

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class Keyword {
   final String title;
-  int count = 0;
+  int count = 1;
 
   Keyword(this.title);
 }
